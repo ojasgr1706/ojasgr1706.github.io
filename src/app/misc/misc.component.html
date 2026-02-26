@@ -1,0 +1,19 @@
+<section class="misc-section section-shell section-reveal" id="courses-section">
+  <div class="section-content courses-panel">
+    <div class="section-header misc-heading">
+      <div>
+        <p class="section-label">Foundation</p>
+        <h2 class="section-title">Course Areas</h2>
+        <p class="section-subtitle">
+          Course work undertaken to build a strong foundation.
+        </p>
+      </div>
+    </div>
+
+    <div class="course-chips">
+      <button class="course-chip" type="button" *ngFor="let course of courses" disabled>
+        {{ course }}
+      </button>
+    </div>
+  </div>
+</section>

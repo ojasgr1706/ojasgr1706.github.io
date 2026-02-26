@@ -1,0 +1,48 @@
+<section class="project-section section-shell section-reveal" id="projects-section">
+  <div class="section-content">
+    <div class="section-header project-section-heading">
+      <div>
+        <p class="section-label">Selected Work</p>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">
+          Research, course, and independent builds spanning agent systems, ML infrastructure, and applied intelligence.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-section-projects card-grid section-content">
+    <article class="project-element ui-card" *ngFor="let item of projects">
+      <div class="project-image ui-card-media">
+        <img [src]="item.image" [alt]="item.title">
+      </div>
+
+      <div class="ui-card-body">
+        <div class="ui-card-meta">
+          <span class="ui-tag" [ngClass]="item.tag.toneClass">{{ item.tag.label }}</span>
+          <span class="ui-card-date">{{ item.periodLabel }}</span>
+        </div>
+
+        <div class="project-heading-stack">
+          <h3 class="ui-card-title">{{ item.title }}</h3>
+          <p class="ui-card-subtitle" *ngIf="item.subtitle">{{ item.subtitle }}</p>
+          <p class="ui-card-org" *ngIf="item.organization">{{ item.organization }}</p>
+        </div>
+
+        <p class="ui-card-summary">{{ item.shortDescription }}</p>
+        <details class="project-more">
+          <summary>Details</summary>
+          <p>{{ item.longDescription }}</p>
+        </details>
+      </div>
+
+      <div class="ui-card-actions">
+        <div *ngFor="let link of item.links">
+          <button class="btn-primary" (click)="openExternal(link.url)">
+            {{ link.placeholder ? (link.label + ' *') : link.label }}
+          </button>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

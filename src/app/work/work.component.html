@@ -1,0 +1,46 @@
+<section class="work-section section-shell section-reveal" id="work-section">
+  <div class="section-content">
+    <div class="section-header work-section-heading">
+      <div>
+        <p class="section-label">Experience</p>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">
+          Research, internships, and teaching roles with an emphasis on ML systems, production-minded experimentation,
+          and applied AI engineering.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="work-section-projects card-grid section-content">
+    <article class="work-element ui-card" *ngFor="let item of workExperiences">
+      <div class="work-image ui-card-media">
+        <img [src]="item.image" [alt]="item.title">
+      </div>
+
+      <div class="ui-card-body">
+        <div class="ui-card-meta">
+          <span class="ui-tag" [ngClass]="item.tag.toneClass">{{ item.tag.label }}</span>
+          <span class="ui-card-date">{{ item.periodLabel }}</span>
+        </div>
+
+        <div class="work-heading-stack">
+          <h3 class="ui-card-title">{{ item.title }}</h3>
+          <p class="ui-card-subtitle" *ngIf="item.subtitle">{{ item.subtitle }}</p>
+          <p class="ui-card-org" *ngIf="item.organization">{{ item.organization }}</p>
+        </div>
+
+        <p class="ui-card-summary">{{ item.shortDescription }}</p>
+        <p class="ui-card-detail work-detail">{{ item.longDescription }}</p>
+      </div>
+
+      <div class="ui-card-actions">
+        <div *ngFor="let link of item.links">
+          <button class="btn-primary" (click)="openExternal(link.url)">
+            {{ link.label }}
+          </button>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

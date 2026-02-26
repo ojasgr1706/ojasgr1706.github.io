@@ -1,0 +1,158 @@
+Portfolio redesign brief (AI Engineer + Research Engineer)
+
+Objective
+- Redesign the site into a premium, technical, recruiter-friendly portfolio for a full-stack AI engineer with strong research engineering depth.
+- The site should feel credible, modern, and intentional, without looking like a generic startup template or an academic poster.
+
+Primary audience
+- Hiring managers
+- Engineering leaders
+- Research engineering teams
+- Technical recruiters
+
+Positioning
+- Product/engineering credibility first
+- Research depth and rigor second
+- Emphasize system building, ML systems, agents/LLMs, and practical deployment quality
+
+Must-keep constraints
+- Single-page flow
+- Dark mode support
+- Responsive desktop and mobile
+- Existing sections remain conceptually intact: Header, About, Work, Projects, Course Areas, Contact
+- Public-facing language only (no internal/developer wording)
+
+Design direction
+- Modern engineering portfolio with research credibility
+- Clean, high-signal layouts with strong spacing and typography hierarchy
+- Subtle motion and layered visuals (not flashy)
+- Structured, readable cards and metadata
+
+Avoid
+- Generic AI landing-page aesthetics
+- Purple-heavy gradients by default
+- Overly saturated neon/cyberpunk styling
+- Motion that hurts readability or feels gimmicky
+- Dense walls of text or oversized decorative elements
+
+Core design principles
+1. Signal over decoration
+- Prioritize clarity of role, impact, systems, and outcomes.
+- Visual polish should support comprehension, not distract from content.
+
+2. Engineering credibility
+- Use precise spacing, clear alignment, and consistent UI tokens.
+- Introduce subtle system/infra cues (grids, node motifs, diagram accents) only where helpful.
+
+3. Research credibility
+- Preserve paper/publication links and rigorous language where relevant.
+- Distinguish research work from course and independent engineering projects visually.
+
+4. Scannability
+- A visitor should understand profile focus in under 30 seconds.
+- Cards should expose role, org, dates, and one-line impact immediately.
+
+Section-by-section goals
+
+1) Header / Navigation
+- Sticky translucent header with blur + clean border.
+- Leftmost: sun/moon icon toggle (already implemented).
+- Remaining nav: Work, Projects, CV, Contact.
+- Add active section highlight-on-scroll (future enhancement ready).
+- Contact dropdown should feel like a polished command panel/menu.
+
+2) About / Hero area
+- Two-column layout: portrait + strong typographic content block.
+- Present a clear identity line (AI Engineer + Research Engineer).
+- Use compact focus tags/chips for key themes (ML Systems, LLMs & Agents, etc.).
+- Improve visual hierarchy: eyebrow, heading, lead paragraph, supporting paragraphs.
+- Optional quick stats row (if added later): AI/ML Systems, Research + Production, NYU / IIT Bombay.
+- Background visuals should be subtle (soft gradients, grid/noise, atmospheric accents).
+
+3) Work Experience
+- Keep card grid, but redesign as impact-first experience panels.
+- Surface:
+  - role title
+  - project/topic subtitle
+  - organization
+  - dates
+  - one-line impact summary
+  - links (paper/repo) when available
+- Hover overlays should remain readable and degrade gracefully on mobile.
+- Optional future additions: stack badges, metrics badges, category tags.
+
+4) Projects
+- Preserve grid layout but improve taxonomy and readability.
+- Each project card should clearly show:
+  - title
+  - project type (Research / Course / Independent)
+  - organization
+  - date range
+  - one-line summary
+  - GitHub button
+- Use subtle visual distinctions by project type (border/accent/tag color).
+- Keep hover interactions clean and avoid obscuring important metadata.
+
+5) Course Areas (bottom)
+- Compact section with 10 small non-clickable pill chips.
+- Present as "Course Areas" (not a raw coursework dump).
+- Use tight spacing, clean pill styling, and subtle color hierarchy.
+
+6) Contact / Links
+- Public-facing professional labels only:
+  - GitHub
+  - LinkedIn
+  - Google Scholar
+  - Email
+- Dropdown should support both themes cleanly and remain keyboard-friendly.
+
+Motion & interaction system
+- Use only these 3 motion types:
+  1. Section reveal (fade + slight translate)
+  2. Card hover elevation + subtle border/accent glow
+  3. Smooth anchor scroll transitions
+- Respect prefers-reduced-motion.
+- Avoid heavy parallax and scroll-jacking.
+
+Visual system requirements
+- Define and use CSS variables/theme tokens for:
+  - page background
+  - surfaces/cards
+  - header/dropdown surfaces
+  - text (high/medium/low emphasis)
+  - borders (default + strong)
+  - accent colors (primary + hover + soft tint)
+  - shadows/elevation
+- Ensure color contrast remains strong in both light and dark modes.
+
+Typography guidance
+- Use a more intentional type system than default browser styling.
+- Prioritize hierarchy:
+  - section titles
+  - project/work titles
+  - metadata (dates/org/type)
+  - summaries/descriptions
+- Optional: monospace accent for tags/dates/metadata chips.
+- Maintain readable paragraph line lengths in About content.
+
+Visual elements that fit this portfolio (pick a few, not all)
+- Stack badges on cards
+- Tiny architecture/graph motifs in hero background
+- Timeline rail or date emphasis in Work
+- Category chips for projects (Research / Systems / Agent / Infra)
+- Metrics badges where available (accuracy, MRR, scale)
+- Subtle textured background layers to avoid flatness
+
+Accessibility and usability requirements
+- Keyboard accessible navigation and dropdown interactions
+- Visible focus states
+- Responsive across desktop/tablet/mobile
+- Reduced-motion support
+- No content hidden behind hover-only interactions on touch devices
+
+Acceptance criteria for the redesign
+- Feels premium, technical, and non-generic
+- About section is easy to skim and no longer reads as a wall of text
+- Work and Projects feel organized, high-signal, and scannable
+- Dark and light modes are both visually cohesive
+- Mobile layout remains clean and readable

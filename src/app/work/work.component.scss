@@ -1,0 +1,42 @@
+.work-section {
+  margin-top: 22px;
+}
+
+.work-section-heading {
+  margin-bottom: 6px;
+}
+
+.work-section-projects {
+  align-items: stretch;
+}
+
+.work-element {
+  min-height: 100%;
+}
+
+.work-image {
+  aspect-ratio: 16 / 8.5;
+}
+
+.work-heading-stack {
+  display: grid;
+  gap: 6px;
+}
+
+.work-detail {
+  -webkit-line-clamp: 5;
+}
+
+.work-element .ui-card-actions {
+  min-height: 48px;
+}
+
+@media (max-width: 768px) {
+  .work-section {
+    margin-top: 14px;
+  }
+
+  .work-detail {
+    -webkit-line-clamp: 6;
+  }
+}
