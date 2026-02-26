@@ -38,7 +38,7 @@ export class HeaderComponent {
   }
 
   openCV() {
-    window.open('/CV/Ojas-Gramopadhye-resume.pdf', '_blank');
+    window.open('/CV/Ojas_Gramopadhye_resume.pdf', '_blank');
   }
 
   toggleContactDropdown() {
